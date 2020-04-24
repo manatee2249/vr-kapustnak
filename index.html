@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina+2:700|Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c88a78b0e6.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
     <script src="script/act.js" defer></script>
     <script src="script/level.js" defer></script>
     <script src="script/main.js" defer></script>
@@ -12,21 +14,31 @@
 </head>
 <body>
     <script>
-        //alert("Ahoj, Právě můžeš pomoct kapustňákovy :) \n Chěl by si s tebou pohrát, najíst se, zkrátka se potřebuje s tebou zabavit.");
+        alert("Ahoj, Právě můžeš pomoct kapustňákovy :) \n Chěl by si s tebou pohrát, \n najíst se, zkrátka se potřebuje s tebou zabavit.");
+        document.getElementById("point").innerHTML = 0;
     </script>
     <div class="all">
-        <div id="score">
-            <p><h2 id="point"></h2> Bodů</p>
+        <div class="hearder">
+            <h1>Kapustňák
+            </h1>
+            <script>
+                document.getElementById("point").innerHTML = 0;
+            </script>
         </div>
-        <div id="side-bar">
-            <i class="fas fa-carrot"></i>
-            <br>
-            <i class="fas fa-apple-alt"></i>¨
-            <br>
-        </div>
-        <div id="container">
+
+        <div class="container">
             <img src="assets/images/manatee.jpeg" alt="kapustňák" usemap="#map">
             <map name="map"></map>
+        </div>
+
+        <div class="side">
+            <i class="fas fa-carrot"></i>
+            <br>
+            <i class="fas fa-apple-alt"></i>
+            <br>
+            <i class="fas fa-hand-point-up"></i>
+            <br>
+            <i class="fas fa-cog" onclick="goTo()"></i>
         </div>
     </div>
 </body>
